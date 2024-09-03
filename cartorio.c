@@ -107,7 +107,8 @@ int main()
 		printf("Escolha a opção desejeada no menu: \n\n");
 		printf("\t1 - Registro de nomes. \n");
 		printf("\t2 - Consulta de nomes. \n");
-		printf("\t3 - Deletar nomes. \n\n");
+		printf("\t3 - Deletar nomes. \n");
+		printf ("\t4 - Sair do sistema. \n\n");
 		printf("Opção: ");
 		scanf("%d", &opcao); // "%d" usado para receber oque usuário digitou e "&opcao" usado para armazenar o valor na variavel "opcao"
 		system("cls"); // usado para limpar a tela
@@ -124,6 +125,11 @@ int main()
 			
 			case 3:
 			deletar(); // chamada de função
+			break;
+			
+			case 4:
+			printf ("\nObrigado por utilizar o sistema. \n");
+			return 0;
 			break;
 			
 			default:
