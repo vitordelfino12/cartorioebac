@@ -90,14 +90,33 @@ int deletar () // Inicio função deletar usuario
 		printf ("\nUsuário deletado com sucesso! \n\n");
 		system ("pause");
 	}
-}
-
-	
+}	
 
 int main()
 {
 	int opcao=0;
 	int x=1;
+	char senhadigitada[10]= "a";
+	
+	while (x==1)
+	{
+		printf("### Cartorio da EBAC ###\n");
+		printf("\nLogin de administrador!\n\nDigite a sua senha:");
+		scanf("%s", senhadigitada);
+		
+		if(strcmp(senhadigitada, "admin") == 0)
+		{
+			printf ("\nAcesso permitido!\n\n");
+			system("pause");
+			break;
+		}
+		else
+		{
+			printf("\nSenha incorreta! Tente novamente\n\n");
+			system("pause");
+			system("cls");
+		}
+	}
 	
 	for (x=1; x=1;)
 	{
@@ -118,20 +137,20 @@ int main()
 			case 1:
 			registro(); // chamada de função
 			break;
-			
+				
 			case 2:
 			consulta(); // chamada de função
 			break;
-			
+				
 			case 3:
 			deletar(); // chamada de função
 			break;
-			
+				
 			case 4:
 			printf ("\nObrigado por utilizar o sistema. \n");
 			return 0;
 			break;
-			
+				
 			default:
 			printf ("Opção não está disponivel \n\n");
 			system ("pause");
