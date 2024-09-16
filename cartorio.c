@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
-#include <string.h>
+#include <stdio.h> // bibilioteca de comunicação com usuario
+#include <stdlib.h> // biblioteca de alocação de espaço em memória
+#include <locale.h> // biblioteca de alocações de texto por região
+#include <string.h> // biblioteca responsável por cuidar das strings
 
 int registro() // Função responsável por cadastrar os usuários no sistema
 {
@@ -104,7 +104,7 @@ int main()
 		printf("\nLogin de administrador!\n\nDigite a sua senha:");
 		scanf("%s", senhadigitada);
 		
-		if(strcmp(senhadigitada, "admin") == 0)
+		if(strcmp(senhadigitada, "admin") == 0) // comparação de senha digitada para validar se esta correta
 		{
 			printf ("\nAcesso permitido!\n\n");
 			system("pause");
